@@ -1,0 +1,37 @@
+<%= form_for(@gist) do |f| %>
+<%
+  all_lexers = Pygments.lexers.flatten.select.with_index(offset = 0) { |x,i| i % 2 == 0 }.sort
+  all_lexers = all_lexers.delete_if { |x| x =~ /.\s./ }
+  all_lexers = all_lexers.map { |x| x.downcase }
+%>
+
+  <% if @gist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
+
+      <ul>
+      <% @gist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <table align="center">
+    <tr>
+    <td> <%= f.label :"Kod programu" %></td>
+    <td><%= f.label :"Opis programu" %></td>
+</tr>
+<tr>
+  <td><%= f.text_area :snippet, :class => "area_kod" %></td>
+      <td><%= f.text_area :description, :class => "area_opis" %></td>
+  </tr>
+  <tr><div class="field">
+    <td class="selekt"><%= f.select :lang, all_lexers %></td>
+    <td class="edit_lang"><%= f.label :"Język programu" %></td>
+    </div>
+    </tr>
+    <tr><td align="center" class="topmargin">
+    <%= f.submit :"Akceptuj", :class => "btn btn-default" %>
+  </td><td></td></tr>
+  </table>
+<% end %>

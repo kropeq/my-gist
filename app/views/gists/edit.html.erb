@@ -1,0 +1,17 @@
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="topmargin">
+		<ul><b><a href="http://jaworowski.herokuapp.com/">Gisty</a>
+		<a href="https://github.com/kropeq/my_gists3">GitHub</a>
+		<a href="http://jaworowski.herokuapp.com/gists/new">Dodaj</a></b></ul>
+		</div>
+	</div>
+</div>
+<div class="center hero-unit">
+<div class="h1">Edycja gistów</div>
+<%= render 'form' %>
+<center>
+<%= link_to 'Pokaż', @gist, :class => "btn btn-default" %>
+<%= link_to 'Wróć', gists_path, :class => "btn btn-default" %>
+</center>
+</div>

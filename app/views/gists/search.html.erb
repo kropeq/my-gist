@@ -1,0 +1,61 @@
+<% if(@gists.length > 0) %>
+<%- model_class = Gist -%>
+
+
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="topmargin">
+    <ul><b><a href="http://jaworowski.herokuapp.com/">Gisty</a>
+    <a href="https://github.com/kropeq/my_gists3">GitHub</a>
+    <a href="http://jaworowski.herokuapp.com/gists/new">Dodaj</a></b></ul>
+    <ul class="nav pull-right">
+          <form class="navbar-form navbar-left pull-right" role="search" action="/gists/search">
+          <div class="form-group">
+ 
+        <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang]))%>
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+        
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="center hero-unit">
+<div class="h1">Umieszczanie gistów</div>
+<br />
+<table border="1">
+  <thead>
+    <tr bgcolor="#DDDDDD">
+      <th>Skrawek</th>
+      <th>Język</th>
+      <th>Opis</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody bgcolor="#99FFCC">
+    <% @gists.each do |gist| %>
+      <tr style="height:100px;">
+        <td class="snippetBox"><%= raw Pygments.highlight(gist.snippet.length > 30 ? gist.snippet[0,90] + "" : gist.snippet, lexer: gist.lang) %></td>
+        <td class="langBox"><b><%= gist.lang %></b></td>
+        <td class="descriptionBox"><%= gist.description %></td>
+        <td class="buttonsBox"><%= link_to 'Pokaż', gist, :class => "btn btn-default batton" %>
+        <%= link_to 'Edytuj', edit_gist_path(gist), :class => "btn btn-default batton" %>
+        <%= link_to 'Usuń', gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default batton" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+
+</div>
+
+
+ <!-- .container -->
+
+<% else if(@gists.length == 0) %>
+    <div class="alert alert-info">
+      <strong>No gists found.</strong>
+    </div>
+<% end end %>

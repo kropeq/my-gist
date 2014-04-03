@@ -1,0 +1,192 @@
+@import "bootstrap";
+
+.navbar {
+	min-height: 40px !important;
+}
+
+.navbar-text {
+	margin-left: 0px !important;
+	margin-bottom: 10px !important;
+	margin-top: 10px !important;
+	line-height: 15px;
+}
+
+.h1 {
+text-align: center;
+font-size:35px;
+color: red !important;
+}
+
+table th{
+font-size:23px;
+text-align: center;
+}
+
+.field {
+margin-left: 50px;
+margin-right: 5px;
+margin-top: 2px;
+width: 80%;
+height: 10px;
+}
+
+.edit_lang {
+	padding-left: 15px;
+}
+
+.table td{
+margin-left: 10px;
+margin-right: 10px;
+font-size:10px;
+}
+
+label {
+font-size: 15px;
+}
+
+p {
+float:left;
+width: 100%;
+font-size: 23px;
+}
+
+.area_kod {
+width: 400px;
+height: 300px;
+background-color: #FFFF66;
+}
+
+.area_opis {
+width: 400px;
+height: 300px;
+background-color: #CCFFCC;
+}
+
+#gist_lang {
+  width: 100%;
+  height: 35px;
+}
+
+#gist_snippet {
+	font-size: 16px;
+}
+
+#gist_description {
+	font-size: 16px;
+}
+
+.topmargin {
+padding-top: 10px;
+padding-left: 30px;
+}
+
+.batton {
+	width: 72px;
+}
+
+.pre{
+	margin: 10px;
+}
+
+.snippetBox {
+	padding: 2px;
+	width:100%;
+	margin-bottom: 0px;
+}
+.descriptionBox {
+	padding-right: 5px;
+	padding-left: 5px;
+	width: 15%;
+	font-size: 18px;
+}
+
+.langBox {
+	padding-right: 3px;
+	padding-left: 3px;
+	width: 10%;
+	font-size: 18px;
+}
+
+.buttonsBox {
+	width: 72px;
+}
+
+.show_width {
+	font-family: verdana;
+	font-size: 21px;
+	color: #777;
+	width: 100% !important;
+}
+
+.selekt {
+	height: 35px;
+}
+
+.hero-unit {
+	padding-top: 25px !important;
+	padding-bottom: 40px !important;
+	padding-right: 40px !important;
+	padding-left: 40px !important;
+	margin-botoom: 0px !important;
+}
+
+@media only screen and (min-width: 641px) {
+	#unseen table td:nth-child(2),
+	#unseen table th:nth-child(2) {display: none;}
+	.hero-unit {
+		padding-left: 10% !important;
+		padding-right: 10% !important;
+	}
+	.buttonsBox {
+		width: 72px !important;
+	}
+	.snippetBox {
+		width: 100% !important;
+	}
+}
+ 
+@media only screen and (max-width: 640px) {
+	#unseen table td:nth-child(4),
+	#unseen table th:nth-child(4),
+	#unseen table td:nth-child(7),
+	#unseen table th:nth-child(7),
+	#unseen table td:nth-child(8),
+	#unseen table th:nth-child(8){display: none;}
+	table th{
+		padding-left: 1px;
+		padding-right: 1px;
+		font-size:12px;
+	}
+	.batton {
+		width: 50px !important;
+		font-size: 7px !important;
+	}
+	.buttonsBox {
+		width: 52px;
+		align:center;
+		float:left;
+	}
+	.langBox {
+		font-size: 13px;
+	}
+	.descriptionBox {
+		font-size: 13px;
+	}
+	.hero-unit {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	.area_kod {
+		width: 100% !important;
+	}
+	.area_opis {
+		width: 100% !important;
+	}
+	#gist_snippet {
+		font-size: 13px !important;
+	}
+	#gist_desciption {
+		font-size: 13px !important;
+	}
+}
+
