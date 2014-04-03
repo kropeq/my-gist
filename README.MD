@@ -1,0 +1,28 @@
+== MY GIST
+Aplikacja na zaliczenie przedmiotu Architektura serwisów internetowych, zapisuje kawałki kodu, informację, w jakim języku kod został napisany oraz jego opis.
+
+== Aplikacja w sieci
+http://jaworgists.herokuapp.com/
+
+== Funkcjonalności podstawowe
+* Dodawanie Gistów
+* Przeglądanie dodanych gistów
+* Wyświetlanie całych gistów pojedynczo
+* Edycja gistów
+* Usuwanie gistów
+
+== Funkcjonalności dodatkowe
+* Kolorowanie kodu w podglądzie gistów
+* Skrawki kodu na stronie głównej
+* Odnośniki do strony głównej, repozytorium GitHub
+* Responsywność całej aplikacji
+* Wyszukiwanie po języku programowania
+* Paginacja
+
+== Gemy
+* pygments.rb
+* redcarpet
+* quiet_assets
+* bootstrap
+* sass-rails
+* will_paginate
