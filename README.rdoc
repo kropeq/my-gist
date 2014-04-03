@@ -1,28 +1,32 @@
-== README
+== MY GIST
+Aplikacja na zaliczenie przedmiotu Architektura serwisów internetowych, zapisuje kawałki kodu, informację, w jakim języku kod został napisany oraz jego opis.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Aplikacja w sieci
+http://jaworgists.herokuapp.com/
 
-Things you may want to cover:
+== Funkcjonalności podstawowe
+* Dodawanie Gistów
+* Przeglądanie dodanych gistów
+* Wyświetlanie całych gistów pojedynczo
+* Edycja gistów
+* Usuwanie gistów
 
-* Ruby version
+== Funkcjonalności dodatkowe
+* Kolorowanie kodu w podglądzie gistów
+* Skrawki kodu na stronie głównej
+* Odnośniki do strony głównej, repozytorium GitHub
+* Responsywność całej aplikacji
+* Wyszukiwanie po języku programowania
+* Paginacja
 
-* System dependencies
+== Gemy
+* pygments.rb
+* redcarpet
+* quiet_assets
+* bootstrap
+* sass-rails
+* will_paginate
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Wersje
+* Rails 4.0.4
+* ruby 2.0.0p451
