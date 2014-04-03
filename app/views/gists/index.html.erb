@@ -1,19 +1,21 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="navbar-inner">
-      <a class="brand czcionka" href="http://jaworgists.herokuapp.com/">Gisty</a>
+    <div class="topmargin">
       <ul class="nav">
-        <li class="active"><a href="https://github.com/kropeq/my-gist">GitHub</a></li>
-        <li class="divider-vertical"></li>
-        <li class="active"><a href="http://jaworgists.herokuapp.com/gists/new">Dodaj</a></li>
-      </ul>
-      <ul class="nav pull-right hidden-xs">
+        <div class="czcionka">
+    <b><li><a href="http://jaworgists.herokuapp.com/">Gisty</a></li>
+    <li><a href="https://github.com/kropeq/my-gist">GitHub</a></li>
+    <li><a href="http://jaworgists.herokuapp.com/gists/new">Dodaj</a></li></b></div>
+        </ul>
+        <ul class="nav pull-right hidden-xs">
           <form class="navbar-form navbar-left pull-right" role="search" action="/gists/search">
           <div class="form-group">
-          <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang])) %>
-          </div>
+        <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang])) %>
           <button type="submit" class="btn btn-default szukaj">Szukaj</button>
+          </div>
         </form>
       </ul>
+    </div>
   </div>
 </div>
 <div class="center hero-unit">
