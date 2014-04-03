@@ -64,7 +64,7 @@ font-size: 15px;
 }
 
 p {
-float:left;
+display:block;
 width: 100%;
 font-size: 23px;
 }
@@ -103,10 +103,10 @@ padding-left: 30px;
 	width: 72px;
 }
 
-/* .pre{
+.pre{
 	float:left !important;
 	margin: 10px;
-} */
+}
 
 .snippetBox {
 	padding: 2px;
