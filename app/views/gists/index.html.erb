@@ -7,7 +7,7 @@
     <a href="https://github.com/kropeq/my-gist">GitHub  </a>
     <a href="http://jaworgists.herokuapp.com/gists/new">Dodaj</a></b></div>
         </ul>
-        <ul class="nav pull-right hidden-xs">
+        <ul class="nav pull-right">
           <form class="navbar-form navbar-left pull-right" role="search" action="/gists/search">
           <div class="form-group">
         <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang])) %>
