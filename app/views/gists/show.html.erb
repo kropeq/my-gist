@@ -24,8 +24,8 @@
 <p class="navbar-text">
   <strong>Snippet:</strong>
 </p>
-
-<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
+<p>
+<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %></p>
 <p align="center"><%= link_to 'Edytuj', edit_gist_path(@gist), :class => "btn btn-default" %> 
 <%= link_to 'Wróć', gists_path, :class => "btn btn-default" %>
 </p>
