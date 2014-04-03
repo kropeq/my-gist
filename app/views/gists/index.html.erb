@@ -1,18 +1,17 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="navbar-inner">
-    <ul>
     <div class="topmargin">
+      <ul>
     <b><a href="http://jaworgists.herokuapp.com/">Gisty</a>
     <a href="https://github.com/kropeq/my-gist">GitHub</a>
-    <a href="http://jaworgists.herokuapp.com/gists/new">Dodaj</a></b>
+    <a href="http://jaworgists.herokuapp.com/gists/new">Dodaj</a></b></ul>
           <form class="navbar-form navbar-left pull-right" role="search" action="/gists/search">
           <div class="form-group">
         <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang]))%>
           </div>
-          <button type="submit" class="btn btn-default">Szukaj</button>
+          <button type="submit" class="btn btn-default szukaj">Szukaj</button>
         </form>
       </div>
-    </ul>
     </div>
   </div>
 </div>
