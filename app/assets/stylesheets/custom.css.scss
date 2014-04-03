@@ -11,10 +11,6 @@
 	line-height: 15px;
 }
 
-#wyswietlanie {
-	width: 80% !important;
-}
-
 .navbar-form {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
@@ -63,14 +59,23 @@ label {
 font-size: 15px;
 }
 
+#wyswietlanie {
+	width: 80% !important;
+}
+
+.pre{
+	margin-top: 10px;
+}
+
 .highlight {
 	display:block;
 }
 
 p {
-display:block !important;
-width: 100%;
-font-size: 23px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	display:block !important;
+	width: 70%;
+	font-size: 23px;
 }
 
 .area_kod {
@@ -105,10 +110,6 @@ padding-left: 30px;
 
 .batton {
 	width: 72px;
-}
-
-.pre{
-	margin-top: 10px;
 }
 
 .snippetBox {
