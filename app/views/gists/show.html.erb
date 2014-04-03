@@ -13,19 +13,19 @@
 	<br />
 	<div class="h1">Treść Twojego GISTA</div>
 <p id="notice"><%= notice %></p>
-<p class="navbar-text">
-  <strong>Lang:</strong>
+<div class="navbar-text">
+  <strong>Lang: </strong>
   <%= @gist.lang %>
-</p>
-<p class="navbar-text">
+</div><br />
+<div class="navbar-text">
   <strong>Description:</strong>
   <%= @gist.description %>
-</p>
-<p class="navbar-text">
+</div><br />
+<div class="navbar-text">
   <strong>Snippet:</strong>
-</p>
-<p class="wyswietlanie">
-<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %></p>
+</div><br />
+<div id="wyswietlanie">
+<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %></div>
 <p align="center"><%= link_to 'Edytuj', edit_gist_path(@gist), :class => "btn btn-default" %> 
 <%= link_to 'Wróć', gists_path, :class => "btn btn-default" %>
 </p>
