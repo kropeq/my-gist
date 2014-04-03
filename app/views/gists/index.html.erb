@@ -8,7 +8,7 @@
     <a href="http://jaworgists.herokuapp.com/gists/new">Dodaj</a></b></div>
           <form class="navbar-form navbar-left pull-right" role="search" action="/gists/search">
           <div class="form-group">
-        <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang]))%>
+        <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang])) %>
           <button type="submit" class="btn btn-default szukaj">Szukaj</button>
           </div>
         </form>
